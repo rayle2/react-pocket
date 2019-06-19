@@ -61,8 +61,5 @@ PriceList.propTypes = {
     onDeleteItem: PropTypes.func.isRequired,
 }
 // 传入参数默认值
-PriceList.defaultProps = {
-    onModifyItem: () => {
-    }
-}
+PriceList.defaultProps = {}
 export default PriceList
