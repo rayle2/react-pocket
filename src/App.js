@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import PriceList from './components/PriceList'
 import ViewTab from './components/ViewTab'
 import TotalPrice from './components/TotalPrice'
+import MonthPicker from './components/MonthPicker'
 
 const items = [
     {
@@ -34,8 +35,8 @@ const items = [
     }
 ]
 
-const income = '1000'
-const outcome = '10000'
+const income = 1000
+const outcome = 10000
 
 function App() {
     return (
@@ -54,6 +55,13 @@ function App() {
                 }}
                 onDeleteItem={(item) => {
                     alert(item.id)
+                }}
+            />
+            <MonthPicker
+                year={2019}
+                month={6}
+                onChange={(year, month) => {
+                    console.log(year, month)
                 }}
             />
         </div>

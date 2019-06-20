@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types' // react自带属性检查
+import PropTypes from 'prop-types'
 
 const TotalPrice = ({income, outcome}) => {
     return (
@@ -8,6 +8,10 @@ const TotalPrice = ({income, outcome}) => {
             <div>支出：{outcome}</div>
         </div>
     )
+}
+TotalPrice.propTypes = {
+    income: PropTypes.number.isRequired, // isRequired必须添加
+    outcome: PropTypes.number.isRequired
 }
 
 export default TotalPrice
